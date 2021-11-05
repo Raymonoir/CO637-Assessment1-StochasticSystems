@@ -45,7 +45,7 @@ class Stochastic {
         // Same as in the first problem but now for a grid of size 2x2
         numStates = 4;
         s1 = 1;
-        s2 = 1;
+        s2 = 2;
 
         double A2 = Markov.getTransProb(s1, s2, numStates);
 
@@ -61,8 +61,8 @@ class Stochastic {
         numStates = 9; // fixed for this question
 
         s1 = 1;
-        s2 = 2;
-        int TS = 3;
+        s2 = 9;
+        int TS = 10;
 
         double A3 = Markov.getSejProb(s1, s2, numStates, TS);
 
@@ -84,7 +84,7 @@ class Stochastic {
 
         double[] ssprob = { 0.1, 0.1, 0.1, 0.2, 0.1, 0.2, 0.05, 0.05, 0.1 };
         s1 = 1;
-        s2 = 2;
+        s2 = 4;
 
         double A4 = Markov.getBiasTransProb(s1, s2, ssprob);
 
@@ -108,6 +108,8 @@ class Stochastic {
 
         // Return as A5 the transition probability from state s1 to state s2
         // Make sure that the function deals with the case when s1 and s2 are the same.
+        s1 = 2;
+        s2 = 1;
 
         double A5 = Markov.getContTransProb(s1, s2, rates);
 
@@ -118,7 +120,7 @@ class Stochastic {
         // For marking, I will change the numerical values, but keep the number of
         // states constant.
 
-        double TSC = 0.02;
+        double TSC = 0.2;
 
         rates[0] = 10.0;
         rates[1] = 5.0;
